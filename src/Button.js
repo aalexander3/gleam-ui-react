@@ -1,8 +1,10 @@
 import React from 'react'
+import './styles/Button.css'
 
-const Button = ({ handleClick, label }) => {
+const Button = ({ handleClick, label, size='medium', color='default' }) => {
+  // color, size, label, handleClick
   return (
-    <button onClick={handleClick}>{label}</button>
+    <button onClick={handleClick} className={`btn btn-${size} btn-${color}`} >{label}</button>
   )
 }
 

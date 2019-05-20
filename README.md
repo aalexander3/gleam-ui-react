@@ -1,16 +1,40 @@
 # gleam-ui-react
 
-[![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
 
-Describe gleam-ui-react here.
+Lightweight UI kit that will make your app sparkle!
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+## Installation
+---
+ `npm i gleam-ui-react`
+
+## Usage
+---
+
+### Button
+
+| Prop Name      | Prop Type (Default)     | Options                       |
+| :------------- | :---------------------- | :---------------------------- |
+| handleClick    | function (null)         | any callback                  |
+| label          | string (null)           | any label                     |
+| color          | string (default)        | default / primary / secondary |
+| size           | string (medium)         | small / medium / large        |
+
+examples:
+```js
+  import { Button } from 'gleam-ui-react'
+
+  const SomeComponent = () => {
+    const handleClick = () => {
+      // action here
+    }
+
+    return (
+      <Button handleClick={handleClick} label='Click Me' color='default' size='medium' />
+    )
+  }
+```
+
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
-
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+[npm]: https://www.npmjs.org/package/gleam-ui-react
