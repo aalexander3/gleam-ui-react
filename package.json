@@ -1,7 +1,7 @@
 {
   "name": "gleam-ui-react",
   "version": "1.0.0",
-  "description": "gleam-ui-react React component",
+  "description": "gleam-ui-react React UI Kit",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
