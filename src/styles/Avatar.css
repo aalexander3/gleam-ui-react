@@ -1,0 +1,20 @@
+.avatar-small {
+  width: 2rem;
+  height: 2rem; }
+
+.avatar-medium {
+  width: 4rem;
+  height: 4rem; }
+
+.avatar-large {
+  width: 6rem;
+  height: 6rem; }
+
+.avatar-circle {
+  border-radius: 50%; }
+
+.avatar-rounded {
+  border-radius: 15%; }
+
+.avatar-square {
+  border-radius: 0; }

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { render } from 'react-dom'
 
 import './styles.css'
-import { Button, Header, SubHeader, TextButton } from '../../src'
+import { Button, Header, SubHeader, TextButton, Divider, Avatar } from '../../src'
 
 class Demo extends Component {
   render() {
@@ -10,8 +10,10 @@ class Demo extends Component {
       <div className='demo'>
         <Header text='Buttons' />
         <SubHeader text='Buttons are great for letting someone know what actions they can do on a page' />
+        <Divider />
 
         <Header text='Normal Buttons' color='primary' />
+        <Divider light length={80} />
         <div>
           <Button handleClick={()=>console.log('works')} label='DEFAULT' />
           <Button handleClick={()=>console.log('works')} label='DISABLED' disabled={true} />
@@ -19,6 +21,7 @@ class Demo extends Component {
           <Button handleClick={()=>console.log('blue button')} label='W/ CHILD' color="primary" className='test'> hello </Button>
           <Button handleClick={()=>console.log('secondary button')} label='SECONDARY' color="secondary" />
         </div>
+
 
         <Header text='Text Buttons' color='primary' skew={true} highlight={true} />
         <SubHeader text='Buttons have a few variations. Check out Text Buttons for a more subtle feel' color='primary' skew={true} highlight={true} />
@@ -38,6 +41,15 @@ class Demo extends Component {
           <TextButton handleClick={()=>console.log('small button')} label='SMALL' color="secondary" size='small' />
           <TextButton handleClick={()=>console.log('medium button')} label='MEDIUM' color="secondary" size='medium' />
           <TextButton handleClick={()=>console.log('large button')} label='LARGE' color="secondary" size='large' />
+        </div>
+
+        <Divider />
+        <Header text='Images and Avatars' />
+        <SubHeader text='Avatars are great as little images connected to person' />
+        <div>
+          <Avatar src='https://arrenalexander.com/images/arren-cartoon.jpg' size='medium' shape='circle' />
+          <Avatar src='https://arrenalexander.com/images/arren-cartoon.jpg' size='medium' shape='rounded' />
+          <Avatar src='https://arrenalexander.com/images/arren-cartoon.jpg' size='medium' shape='square' />
         </div>
       </div>
     )
