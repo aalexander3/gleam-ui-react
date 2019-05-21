@@ -2,22 +2,21 @@ import React, { Component } from 'react'
 import { render } from 'react-dom'
 
 import './styles.css'
-import { Button, Header, SubHeader, TextButton, Divider, Avatar } from '../../src'
+import { Navbar, FlexContainer } from '../../src'
 
 class Demo extends Component {
   render() {
     return (
       <div className='demo'>
-        
+        <Navbar direction='horizontal'> <a href='#'>Home</a></Navbar>
+        <FlexContainer direction='row' alignItems='center' justifyContent='space-evenly' width='50%' height='200px' >
+          <p>hello</p>
+          <p>world</p>
+          <p>it's </p>
+          <p>me</p>
+        </FlexContainer>
 
-        <Divider />
-        <Header text='Images and Avatars' />
-        <SubHeader text='Avatars are great as little images connected to person' />
-        <div>
-          <Avatar src='https://arrenalexander.com/images/arren-cartoon.jpg' size='medium' shape='circle' />
-          <Avatar src='https://arrenalexander.com/images/arren-cartoon.jpg' size='medium' shape='rounded' />
-          <Avatar src='https://arrenalexander.com/images/arren-cartoon.jpg' size='medium' shape='square' />
-        </div>
+
       </div>
     )
   }

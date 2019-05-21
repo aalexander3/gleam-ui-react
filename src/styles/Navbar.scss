@@ -1,0 +1,16 @@
+@import 'themes.scss';
+
+.navbar {
+  display: flex;
+  width: 100%;
+  min-height: 8vh;
+}
+
+.navbar-vertical {
+  flex-direction: column;
+}
+
+.navbar-horizontal {
+  flex-direction: row;
+  align-items: center;
+}

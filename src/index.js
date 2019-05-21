@@ -12,5 +12,11 @@ export SubHeader from './Headers/SubHeader'
 // UTILS
 export Divider from './Utils/Divider'
 
+// Layout
+export FlexContainer from './Layout/FlexContainer'
+
 // IMAGES
 export Avatar from './Images/Avatar'
+
+// NAVIGATION
+export Navbar from './Nav/Navbar'
