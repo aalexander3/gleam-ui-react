@@ -11,7 +11,7 @@
     "umd"
   ],
   "scripts": {
-    "start": "npm-run-all -p build-css start-js",
+    "start": "npm-run-all -p watch-css start-js",
     "start-js": "nwb serve-react-demo",
     "build": "npm-run-all build-css build-js",
     "build-css": "node-sass-chokidar src/styles/ -o src/styles",

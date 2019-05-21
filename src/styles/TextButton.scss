@@ -1,0 +1,83 @@
+@import 'themes.scss';
+
+.text-btn {
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all .1s linear;
+  transform: translate(-3px, 3px);
+  margin: .35vw;
+  border: none;
+
+  &:hover {
+    box-shadow: -3px 3px $dark;
+    transform: translate(0, 0);
+  }
+
+  &:active {
+    box-shadow: -2px 2px $dark;
+    transform: translate(-1px, 1px);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.text-btn[disabled] {
+  opacity: .9;
+  cursor: default;
+
+  &:hover {
+    box-shadow: 0 0 $dark;
+    transform: translate(-3px, 3px);
+    border: none;
+  }
+
+  &:active {
+    box-shadow: 0 0 $dark;
+    transform: translate(-3px, 3px);
+  }
+}
+
+.text-btn-default {
+  color: $dark;
+  background-color: #fff;
+
+  &:hover {
+    border: solid $dark 1.3px;
+  }
+}
+
+.text-btn-primary {
+  color: $primary;
+  background-color: #fff;
+
+  &:hover {
+    border: solid $primary-hover 1.3px;
+    box-shadow: -3px 3px $primary-hover;
+    transform: translate(0, 0);
+  }
+
+  &:active {
+    border: solid $primary-hover 1.3px;
+    box-shadow: -2px 2px $primary-hover;
+    transform: translate(-1px, 1px);
+  }
+}
+
+.text-btn-secondary {
+  color: $secondary;
+  background-color: #fff;
+
+  &:hover {
+    border: solid $secondary-hover 1.3px;
+    box-shadow: -3px 3px $secondary-hover;
+    transform: translate(0, 0);
+  }
+
+  &:active {
+    border: solid $secondary 1.3px;
+    box-shadow: -2px 2px $secondary-hover;
+    transform: translate(-1px, 1px);
+  }
+}

@@ -1,0 +1,56 @@
+.text-btn {
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all .1s linear;
+  transform: translate(-3px, 3px);
+  margin: .35vw;
+  border: none; }
+  .text-btn:hover {
+    box-shadow: -3px 3px #17202A;
+    transform: translate(0, 0); }
+  .text-btn:active {
+    box-shadow: -2px 2px #17202A;
+    transform: translate(-1px, 1px); }
+  .text-btn:focus {
+    outline: none; }
+
+.text-btn[disabled] {
+  opacity: .9;
+  cursor: default; }
+  .text-btn[disabled]:hover {
+    box-shadow: 0 0 #17202A;
+    transform: translate(-3px, 3px);
+    border: none; }
+  .text-btn[disabled]:active {
+    box-shadow: 0 0 #17202A;
+    transform: translate(-3px, 3px); }
+
+.text-btn-default {
+  color: #17202A;
+  background-color: #fff; }
+  .text-btn-default:hover {
+    border: solid #17202A 1.3px; }
+
+.text-btn-primary {
+  color: #2F84D8;
+  background-color: #fff; }
+  .text-btn-primary:hover {
+    border: solid #163C63 1.3px;
+    box-shadow: -3px 3px #163C63;
+    transform: translate(0, 0); }
+  .text-btn-primary:active {
+    border: solid #163C63 1.3px;
+    box-shadow: -2px 2px #163C63;
+    transform: translate(-1px, 1px); }
+
+.text-btn-secondary {
+  color: #E8372E;
+  background-color: #fff; }
+  .text-btn-secondary:hover {
+    border: solid #A92922 1.3px;
+    box-shadow: -3px 3px #A92922;
+    transform: translate(0, 0); }
+  .text-btn-secondary:active {
+    border: solid #E8372E 1.3px;
+    box-shadow: -2px 2px #A92922;
+    transform: translate(-1px, 1px); }
