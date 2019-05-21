@@ -13,12 +13,17 @@ Lightweight UI kit that will make your app sparkle!
 
 ### Button
 
-| Prop Name      | Prop Type (Default)     | Options                       |
-| :------------- | :---------------------- | :---------------------------- |
-| handleClick    | function (null)         | any callback                  |
-| label          | string (null)           | any label                     |
-| color          | string (default)        | default / primary / secondary |
-| size           | string (medium)         | small / medium / large        |
+#### Props
+| Name           | Prop Type                            | Default       | Description                   |
+| :------------- | :----------------------------        |:------------- | :---------------------------- |
+| handleClick    | function                             | null          | callback for action           |
+| label          | string                               | null          | text to display               |
+| color          | enum - default / primary / secondary | default       | background color              |
+| size           | enum - small / medium / large        | medium        | size of the button            |
+| disabled       | bool                                 | false         | disables the button           |
+| className      | string                               | ''            | additional classNames for the button      |
+| children       | node                                 | null          | children to be rendered inside button     |
+| variant        | enum -                               | null          | children to be rendered inside button     |
 
 examples:
 ```js

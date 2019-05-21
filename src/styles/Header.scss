@@ -1,0 +1,13 @@
+@import './themes.scss';
+
+.header-default {
+  color: #000;
+}
+
+.header-primary {
+  color: $primary;
+}
+
+.header-secondary {
+  color: $secondary;
+}

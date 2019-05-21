@@ -1,0 +1,94 @@
+@import 'themes.scss';
+
+.btn {
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all .1s linear;
+  transform: translate(-3px, 3px);
+  margin: .35vw;
+}
+
+.btn:hover {
+  box-shadow: -3px 3px $dark;
+  transform: translate(0, 0);
+}
+
+.btn:active {
+  box-shadow: -2px 2px $dark;
+  transform: translate(-1px, 1px);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn[disabled] {
+  opacity: .9;
+  cursor: default;
+
+  &:hover {
+    box-shadow: 0 0 $dark;
+    transform: translate(-3px, 3px);
+  }
+
+  &:active {
+    box-shadow: 0 0 $dark;
+    transform: translate(-3px, 3px);
+  }
+}
+
+.btn-default {
+  border: solid $dark 1.3px;
+  color: $dark;
+  background-color: #fff;
+}
+
+.btn-primary {
+  border: solid $primary 1.3px;
+  color: #fff;
+  background-color: $primary;
+}
+
+.btn-primary:hover {
+  box-shadow: -3px 3px $primary-hover;
+  transform: translate(0, 0);
+}
+
+.btn-primary:active {
+  box-shadow: -2px 2px $primary-hover;
+  transform: translate(-1px, 1px);
+}
+
+.btn-secondary {
+  border: solid $secondary 1.3px;
+  color: #fff;
+  background-color: $secondary;
+}
+
+.btn-secondary:hover {
+  box-shadow: -3px 3px $secondary-hover;
+  transform: translate(0, 0);
+}
+
+.btn-secondary:active {
+  box-shadow: -2px 2px $secondary-hover;
+  transform: translate(-1px, 1px);
+}
+
+.btn-small {
+  min-width: 10vh;
+  height: 4vh;
+  font-size: .8em;
+}
+
+.btn-medium {
+  min-width: 12vh;
+  height: 5vh;
+  font-size: 1em;
+}
+
+.btn-large {
+  min-width: 14vh;
+  height: 6vh;
+  font-size: 1.2em;
+}
