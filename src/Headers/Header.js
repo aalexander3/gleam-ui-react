@@ -1,9 +1,12 @@
 import React from 'react'
 
-const Header = ({ text, color='default', className='', children, ...props }) => {
-  // add skew and highlight
+const Header = ({ text, color='default', className='', skew, highlight, children, ...props }) => {
+  const classes = `${skew ? 'header-skewed ' : ''}${highlight ? 'header-highlight-' + color : 'header-' + color} ${className}`
+
   return (
-    <h1 className={`header-${color} ${className}`} {...props} >{text} {children}</h1>
+    <div>
+      <h1 className={classes} {...props} >{text} {children}</h1>
+    </div>
   )
 }
 

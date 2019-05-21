@@ -20,8 +20,8 @@ class Demo extends Component {
           <Button handleClick={()=>console.log('secondary button')} label='SECONDARY' color="secondary" />
         </div>
 
-        <Header text='Text Buttons' color='default'/>
-        <SubHeader text='Buttons have a few variations. Check out Text Buttons for a more subtle feel' />
+        <Header text='Text Buttons' color='primary' skew={true} highlight={true} />
+        <SubHeader text='Buttons have a few variations. Check out Text Buttons for a more subtle feel' color='primary' skew={true} highlight={true} />
         <div>
           <TextButton handleClick={()=>console.log('default button')} label='DEFAULT' color="default" size='medium' />
           <TextButton handleClick={()=>console.log('primary button')} label='PRIMARY' color="primary" size='medium' />
