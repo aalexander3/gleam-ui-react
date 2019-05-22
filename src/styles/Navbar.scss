@@ -8,6 +8,10 @@
   display: flex;
 }
 
+.navbar.open {
+  min-height: 16vh;
+}
+
 .navbar-vertical {
   flex-direction: column;
 }
@@ -49,6 +53,34 @@
   }
 }
 
-.nav-group {
 
+
+@media (max-width:650px) {
+  .navbar {
+    padding: 4vh 2vh 0 2vh;
+  }
+
+  .navbar-horizontal {
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+  }
+
+  .extended-nav {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 4vh;
+  }
+
+  .nav-group-right {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .nav-group-left {
+    flex-direction: column;
+    align-items: flex-end;
+  }
 }
