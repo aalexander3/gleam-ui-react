@@ -1,9 +1,11 @@
 @import 'themes.scss';
 
 .navbar {
-  display: flex;
-  width: 100%;
+  width: 96%;
   min-height: 8vh;
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+  padding: 0 2%;
+  display: flex;
 }
 
 .navbar-vertical {
@@ -13,4 +15,40 @@
 .navbar-horizontal {
   flex-direction: row;
   align-items: center;
+}
+
+.nav-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-group-right {
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.nav-group-left {
+  justify-content: flex-start;
+}
+
+.nav-item {
+  text-decoration: none;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.nav-item.brand {
+  font-size: 1.4em;
+}
+
+.nav-item.link {
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.nav-group {
+
 }

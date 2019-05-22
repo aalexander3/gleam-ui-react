@@ -20,3 +20,5 @@ export Avatar from './Images/Avatar'
 
 // NAVIGATION
 export Navbar from './Nav/Navbar'
+export NavItem from './Nav/NavItem'
+export NavGroup from './Nav/NavGroup'
