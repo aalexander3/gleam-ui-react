@@ -1,41 +1,38 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import Media from "react-media";
 import NavGroup from './NavGroup'
 import NavCollapse from './NavCollapse'
 
-class Navbar extends Component {
+const Navbar = ({ children, direction, color, hiddenContent, collapsable }) => {
 
-  state = {
-    open: false
+  const [ open, setOpen ] = useState(false)
+
+  const toggleCollapsed = () => {
+    setOpen(!open)
+    // setState(prevState => ({ open: !prevState.open }))
   }
 
-  toggleCollapsed = () => {
-    this.setState(prevState => ({ open: !prevState.open }))
-  }
-
-  getVerticalNav = () => {
-    const { children, direction, color, hiddenContent, collapsable } = this.props
-    const { open } = this.state
+  const getVerticalNav = () => {
+    // const { children, direction, color, hiddenContent, collapsable } = this.props
+    // const { open } = this.state
     const classes = `navbar-${direction} ${color} ${open ? 'open' : ''}`
 
     return (
       <nav className={classes} >
-        {collapsable && <NavCollapse toggleCollapsed={this.toggleCollapsed} open={open} {...this.props} />}
+        {collapsable && <NavCollapse toggleCollapsed={toggleCollapsed} open={open} />}
         {(open && hiddenContent)? hiddenContent : children}
       </nav>
     )
   }
 
-  getHorizontalNav = () => {
-    const { children, direction, color, hiddenContent, collapsable } = this.props
-    const { open } = this.state
+  const getHorizontalNav = () => {
     const classes = `navbar-${direction} ${color}`
 
     return (
       <Fragment>
         <nav className={classes} >
           {children}
-          {collapsable && <NavCollapse toggleCollapsed={this.toggleCollapsed} open={open} {...this.props} /> }
+          {collapsable && <NavCollapse toggleCollapsed={toggleCollapsed} open={open} /> }
         </nav>
         {open &&
           <div className={`extended-nav ${color}`} >
@@ -46,14 +43,10 @@ class Navbar extends Component {
     )
   }
 
-  render(){
-    const { direction } = this.props
-
-    if (direction === 'vertical') {
-      return this.getVerticalNav()
-    } else {
-      return this.getHorizontalNav()
-    }
+  if (direction === 'vertical') {
+    return getVerticalNav()
+  } else {
+    return getHorizontalNav()
   }
 }
 

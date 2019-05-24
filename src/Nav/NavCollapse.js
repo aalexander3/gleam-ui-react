@@ -4,7 +4,7 @@ import NavGroup from './NavGroup'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 
-const NavCollapse = ({ children, direction, color, toggleCollapsed, open }) => {
+const NavCollapse = ({ toggleCollapsed, open }) => {
   const getHamburger = () => {
     return (
       <div className={`nav-item plus-icon ${open ? 'open': ''}`} onClick={toggleCollapsed} >
