@@ -1,50 +1,59 @@
 import React, { Component, Fragment } from 'react';
 import Media from "react-media";
 import NavGroup from './NavGroup'
+import NavCollapse from './NavCollapse'
 
 class Navbar extends Component {
+
   state = {
     open: false
-  }
-
-  getHamburger = () => {
-    return (
-      <div className='nav-item' onClick={this.toggleCollapsed} >
-        HAMBURGER
-      </div>
-    )
   }
 
   toggleCollapsed = () => {
     this.setState(prevState => ({ open: !prevState.open }))
   }
 
-  render(){
-    const { children, direction, color } = this.props
+  getVerticalNav = () => {
+    const { children, direction, color, hiddenContent, collapsable } = this.props
     const { open } = this.state
-    const classes = open ? `navbar navbar-${direction} open ${color}` : `navbar navbar-${direction} ${color}`
+    const classes = `navbar-${direction} ${color} ${open ? 'open' : ''}`
+
+    return (
+      <nav className={classes} >
+        {collapsable && <NavCollapse toggleCollapsed={this.toggleCollapsed} open={open} {...this.props} />}
+        {(open && hiddenContent)? hiddenContent : children}
+      </nav>
+    )
+  }
+
+  getHorizontalNav = () => {
+    const { children, direction, color, hiddenContent, collapsable } = this.props
+    const { open } = this.state
+    const classes = `navbar-${direction} ${color}`
 
     return (
       <Fragment>
-        <Media query="(max-width: 650px)" >
-          <Fragment>
-            <nav className={classes} >
-              <NavGroup justify='right' >{this.getHamburger()}</NavGroup>
-              {open &&
-                <div className='extended-nav' >
-                  {children}
-                </div>
-              }
-            </nav>
-          </Fragment>
-        </Media>
-        <Media query="(min-width: 651px)" >
-          <nav className={classes} >
-            {children}
-          </nav>
-        </Media>
+        <nav className={classes} >
+          {children}
+          {collapsable && <NavCollapse toggleCollapsed={this.toggleCollapsed} open={open} {...this.props} /> }
+        </nav>
+        {open &&
+          <div className={`extended-nav ${color}`} >
+            {(open && hiddenContent) ? hiddenContent : children.slice(1)}
+          </div>
+        }
       </Fragment>
     )
+  }
+
+  render(){
+    const { direction } = this.props
+
+    if (direction === 'vertical') {
+      return this.getVerticalNav()
+    } else {
+      return this.getHorizontalNav()
+    }
   }
 }
 
@@ -52,5 +61,8 @@ class Navbar extends Component {
 // children: any nodes that are rendered inside the nav
 // color: enum - default, primary, secondary
 // justify: right / left
+// hidden content: array of nodes ? to make the nav extendable.
+// when open - show the array of hidden nodes
+// collapsable - bool
 
 export default Navbar
