@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 const NavItem = ({ children, variant }) => {
   const classes = `nav-item ${variant}`
@@ -9,9 +10,15 @@ const NavItem = ({ children, variant }) => {
     </div>
   )
 }
-// props are:
-// children: any nodes that are rendered inside the nav
-// href: url
-// variant: brand, link, button
+
+NavItem.proptypes = {
+  children: PropTypes.arrayOf(PropTypes.node),
+  variant: PropTypes.oneOf(['brand', 'link', 'button'])
+}
+
+NavItem.defaultProps = {
+  children: [],
+  variant: 'link'
+}
 
 export default NavItem

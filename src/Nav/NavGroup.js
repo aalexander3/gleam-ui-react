@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types'
 
 const NavGroup = ({ children, justify }) => {
 
@@ -9,8 +10,14 @@ const NavGroup = ({ children, justify }) => {
   )
 }
 
-// props are :
-// children nodes
-// justify: enum left / right
+NavGroup.proptypes = {
+  children: PropTypes.arrayOf(PropTypes.node),
+  justify: PropTypes.oneOf(['right', 'left'])
+}
+
+NavGroup.defaultProps = {
+  children: [],
+  justify: 'right'
+}
 
 export default NavGroup

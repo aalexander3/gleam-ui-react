@@ -26,7 +26,7 @@ class Demo extends Component {
 
     return (
       <div className='demo'>
-        <Navbar direction='horizontal' color='default' hiddenContent={hiddenContent1}>
+        <Navbar>
           <NavGroup justify='left'>
             <NavItem variant="brand"><a href='#'>Home</a></NavItem>
           </NavGroup>

@@ -1,61 +1,80 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, Component } from 'react';
 import Media from "react-media";
 import NavGroup from './NavGroup'
 import NavCollapse from './NavCollapse'
+import PropTypes from 'prop-types'
+import { colorList } from '../constants/Colors'
 
-const Navbar = ({ children, direction, color, hiddenContent, collapsable }) => {
+class Navbar extends Component {
 
-  const [ open, setOpen ] = useState(false)
-
-  const toggleCollapsed = () => {
-    setOpen(!open)
-    // setState(prevState => ({ open: !prevState.open }))
+  state = {
+    open: false
   }
 
-  const getVerticalNav = () => {
-    // const { children, direction, color, hiddenContent, collapsable } = this.props
-    // const { open } = this.state
+  toggleCollapsed = () => {
+    this.setState(prevState => ({ open: !prevState.open }))
+  }
+
+  closeNav = () => {
+    this.setState({ open: false })
+  }
+
+  getVerticalNav = () => {
+    const { children, direction, color, hiddenContent, collapsable } = this.props
+    const { open } = this.state
     const classes = `navbar-${direction} ${color} ${open ? 'open' : ''}`
 
     return (
-      <nav className={classes} >
-        {collapsable && <NavCollapse toggleCollapsed={toggleCollapsed} open={open} />}
+      <nav className={classes} onMouseLeave={this.closeNav}>
+        {collapsable && <NavCollapse toggleCollapsed={this.toggleCollapsed} open={open} />}
         {(open && hiddenContent)? hiddenContent : children}
       </nav>
     )
   }
 
-  const getHorizontalNav = () => {
+  getHorizontalNav = () => {
+    const { children, direction, color, hiddenContent, collapsable } = this.props
+    const { open } = this.state
     const classes = `navbar-${direction} ${color}`
 
     return (
-      <Fragment>
+      <div onMouseLeave={this.closeNav}>
         <nav className={classes} >
           {children}
-          {collapsable && <NavCollapse toggleCollapsed={toggleCollapsed} open={open} /> }
+          {collapsable && <NavCollapse toggleCollapsed={this.toggleCollapsed} open={open} /> }
         </nav>
         {open &&
           <div className={`extended-nav ${color}`} >
             {(open && hiddenContent) ? hiddenContent : children.slice(1)}
           </div>
         }
-      </Fragment>
+      </div>
     )
   }
 
-  if (direction === 'vertical') {
-    return getVerticalNav()
-  } else {
-    return getHorizontalNav()
+  render(){
+    if (this.props.direction === 'vertical') {
+      return this.getVerticalNav()
+    } else {
+      return this.getHorizontalNav()
+    }
   }
 }
 
-// props are: direction: enum - horizontal / vertical
-// children: any nodes that are rendered inside the nav
-// color: enum - default, primary, secondary
-// justify: right / left
-// hidden content: array of nodes ? to make the nav extendable.
-// when open - show the array of hidden nodes
-// collapsable - bool
+Navbar.proptypes = {
+  direction: PropTypes.string,
+  children:  PropTypes.arrayOf(PropTypes.node),
+  color: PropTypes.oneOf(colorList),
+  hiddenContent: PropTypes.arrayOf(PropTypes.node),
+  collapsable: PropTypes.bool
+}
+
+Navbar.defaultProps = {
+  direction: 'horizontal',
+  children:  [],
+  color: 'default',
+  hiddenContent: [],
+  collapsable: false
+}
 
 export default Navbar
