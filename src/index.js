@@ -26,3 +26,4 @@ export NavGroup from './Nav/NavGroup'
 // FORM
 export ImageUpload from './Form/ImageUpload'
 export Input from './Form/Input'
+export Select from './Form/Select'

@@ -7,40 +7,26 @@
   width: 80%;
 }
 
-.input {
+input, select {
   font-size: 1.2em;
   border: none;
   border-bottom: 1px solid #222;
-
-  &:after {
-    content: '';
-    display: block;
-    border-bottom: 1.4px solid $primary;
-    width: 0;
-    position: absolute;
-    right: 0;
-    -webkit-transition: 1s ease;
-    transition: 1s ease;
-  }
+  transition: all .2s ease;
+  margin-bottom: 1em;
 
   &:hover {
-    border-bottom: none;
+    border-bottom: 1.5px solid $primary;
   }
 
   &:focus {
     outline: none;
-    border-bottom: none;
+    border-bottom: 1.5px solid $primary;
   }
 
-  &:hover:after {
-    width: 100%;
-  }
-
-  &:focus:after {
-    width: 100%;
+  &.error {
+    border-bottom: 1.5px solid red;
   }
 }
-
 
 .input-label {
   position: absolute;
@@ -51,4 +37,13 @@
     transform: scale(.85) translate(0, -22px);
     color: $primary;
   }
+
+  &.error {
+    color: red;
+  }
+}
+
+.error-message {
+  color: red;
+  transform: translate(0, 6px);
 }
