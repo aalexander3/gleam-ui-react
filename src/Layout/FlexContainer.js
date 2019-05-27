@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 
-const FlexContainer = ({ direction, justifyContent, alignItems, width, height, wrap=false, children }) => {
+const FlexContainer = ({ direction, justifyContent, alignItems, width, height, wrap, children }) => {
   const styles = {
     justifyContent,
     alignItems,
@@ -18,12 +19,25 @@ const FlexContainer = ({ direction, justifyContent, alignItems, width, height, w
   )
 }
 
-// props are:
-// direction: row, column
-// justify-content: center, baseline, etc
-// align-items: center, baseline, etc
-// wrap: bool
-// height, width ?
-// children: nodes
+FlexContainer.proptypes = {
+  direction: PropTypes.oneOf(['row', 'column']),
+  justifyContent: PropTypes.oneOf(['center', 'flexStart', 'flexEnd']),
+  alignItems: PropTypes.oneOf(['center', 'flexStart', 'flexEnd']),
+  wrap: PropTypes.bool,
+  height: PropTypes.string,
+  width: PropTypes.string,
+  children: PropTypes.arrayOf(PropTypes.node)
+}
+
+FlexContainer.defaultProps = {
+  direction: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+  wrap: false,
+  height: '100%',
+  width: '100%',
+  children: []
+}
+
 
 export default FlexContainer
