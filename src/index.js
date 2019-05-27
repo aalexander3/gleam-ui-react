@@ -22,3 +22,7 @@ export Avatar from './Images/Avatar'
 export Navbar from './Nav/Navbar'
 export NavItem from './Nav/NavItem'
 export NavGroup from './Nav/NavGroup'
+
+// FORM
+export ImageUpload from './Form/ImageUpload'
+export Input from './Form/Input'

@@ -1,0 +1,54 @@
+@import './themes.scss';
+
+.input-base {
+  flex-direction: column;
+  display: flex;
+  padding: .5rem;
+  width: 80%;
+}
+
+.input {
+  font-size: 1.2em;
+  border: none;
+  border-bottom: 1px solid #222;
+
+  &:after {
+    content: '';
+    display: block;
+    border-bottom: 1.4px solid $primary;
+    width: 0;
+    position: absolute;
+    right: 0;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+  }
+
+  &:hover {
+    border-bottom: none;
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom: none;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+
+  &:focus:after {
+    width: 100%;
+  }
+}
+
+
+.input-label {
+  position: absolute;
+  transform: scale(1) translate(0, 0);
+  transition: transform .2s linear, color .2s linear;
+
+  &.filled {
+    transform: scale(.85) translate(0, -22px);
+    color: $primary;
+  }
+}

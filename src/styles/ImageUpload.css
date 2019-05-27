@@ -1,0 +1,47 @@
+.uploader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: .5rem; }
+
+.upload-label {
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  max-width: 100%;
+  padding: .25em;
+  background: #fff;
+  border: 1px dashed #669AA5;
+  border-radius: .28rem;
+  transition: background .3s;
+  text-align: center;
+  justify-content: center;
+  align-items: center; }
+
+.upload-button svg {
+  font-size: 2.5em; }
+
+.upload-button p {
+  margin: 0; }
+
+.upload-label:hover {
+  cursor: pointer;
+  box-shadow: 0 0 2px 2px rgba(24, 144, 255, 0.2);
+  border-right-width: 1px !important; }
+
+.upload-preview {
+  max-width: 6rem;
+  max-height: 6rem;
+  border-radius: .28rem; }
+
+.upload-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 1;
+  width: 0;
+  height: 100%;
+  opacity: 0; }
