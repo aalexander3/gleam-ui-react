@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSortDown } from '@fortawesome/free-solid-svg-icons'
 
 class Select extends Component {
 
@@ -30,23 +32,26 @@ class Select extends Component {
     const { name, onChange, value, disabled, label, error, options } = this.props
     const { focused } = this.state
     const inputName = `input-${name}`
-    const classes = `input ${error ? 'error' : ''}`
+    const classes = `input select ${error ? 'error' : ''}`
 
     return (
       <div className='input-base'>
         <label htmlFor={inputName} className={this.getLabelClass()}>{label}</label>
-        <select
-          onFocus={this.focus}
-          onBlur={this.blur}
-          onChange={onChange}
-          className={classes}
-          id={inputName}
-          name={name}
-          value={value}
-          disabled={disabled}>
-          <option disabled selected label=''></option>
-          {options.map(opt => <option value={opt} key={opt}>{opt}</option>)}
-        </select>
+        <div className='select-holder'>
+          <select
+            onFocus={this.focus}
+            onBlur={this.blur}
+            onChange={onChange}
+            className={classes}
+            id={inputName}
+            name={name}
+            value={value}
+            disabled={disabled}>
+            <option disabled selected label=''></option>
+            {options.map(opt => <option value={opt} key={opt}>{opt}</option>)}
+          </select>
+          <FontAwesomeIcon icon={faSortDown} />
+        </div>
         {error && <small className='error-message'>{error}</small>}
       </div>
     )

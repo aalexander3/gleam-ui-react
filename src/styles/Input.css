@@ -2,21 +2,34 @@
   flex-direction: column;
   display: flex;
   padding: .5rem;
-  width: 80%; }
+  width: 80%;
+  box-sizing: border-box; }
 
-input, select {
+.input {
   font-size: 1.2em;
   border: none;
   border-bottom: 1px solid #222;
   transition: all .2s ease;
   margin-bottom: 1em; }
-  input:hover, select:hover {
+  .input:hover {
     border-bottom: 1.5px solid #2F84D8; }
-  input:focus, select:focus {
+  .input:focus {
     outline: none;
     border-bottom: 1.5px solid #2F84D8; }
-  input.error, select.error {
+  .input.error {
     border-bottom: 1.5px solid red; }
+
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  width: 100%;
+  margin-right: -.8em;
+  margin-bottom: 0; }
+
+.select-holder {
+  display: flex;
+  margin-bottom: 1em; }
 
 .input-label {
   position: absolute;
