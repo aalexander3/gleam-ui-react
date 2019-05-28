@@ -47,7 +47,7 @@ class Select extends Component {
             name={name}
             value={value}
             disabled={disabled}>
-            <option disabled selected label=''></option>
+            <option disabled label=''></option>
             {options.map(opt => <option value={opt} key={opt}>{opt}</option>)}
           </select>
           <FontAwesomeIcon icon={faSortDown} />
@@ -66,7 +66,7 @@ Select.proptypes = {
   name: PropTypes.string,
   onChange: PropTypes.func,
   error: PropTypes.string,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
 }
 
 Select.defaultProps = {
@@ -77,7 +77,7 @@ Select.defaultProps = {
   name: '',
   onChange: () => {},
   error: '',
-  disabled: false
+  disabled: false,
 }
 
 export default Select

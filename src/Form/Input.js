@@ -74,14 +74,3 @@ Input.defaultProps = {
 }
 
 export default Input
-
-
-
-// type - oneOf(number, text, password, )
-// label / same as placeholder
-// value - ''
-// required - bool
-// name
-// onChange
-// error
-// disabled

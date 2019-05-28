@@ -62,21 +62,19 @@ class ImageUpload extends Component {
 
     return (
       <div className="uploader">
+        {label && <p>{this.props.label}</p>}
         <label
           htmlFor='upload-input'
           className='upload-label' >
           {imageUrl ? <img className="upload-preview" src={imageUrl} alt="file" /> : uploadButton}
         </label>
 
-        <div>
-          <input
-            id='upload-input'
-            className='upload-input'
-            onChange={this.uploadImage}
-            name='file'
-            type='file' />
-          {label && <p>{this.props.label}</p>}
-        </div>
+        <input
+          id='upload-input'
+          className='upload-input'
+          onChange={this.uploadImage}
+          name='file'
+          type='file' />
       </div>
     )
   }
