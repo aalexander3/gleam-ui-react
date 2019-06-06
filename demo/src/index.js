@@ -2,32 +2,16 @@ import React, { Component } from 'react'
 import { render } from 'react-dom'
 
 import './styles.css'
-import { Navbar, NavItem, NavGroup, FlexContainer, Button, ImageUpload, Input, Select, Checkbox, Form, Submit } from '../../src'
+import { Navbar, NavItem, NavGroup, FlexContainer, Button, ImageUpload, Input, Select, Checkbox, Form, Submit, Modal } from '../../src'
 
 class Demo extends Component {
 
   state = {
-    password: '',
-    select: '',
-    name: '',
-    admin: false
+    open: false
   }
 
-  handleChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value
-    }, () => console.log(this.state))
-  }
-
-  handleCheck = (e) => {
-    e.persist()
-    this.setState(prevState => ({
-      [e.target.name]: !prevState[e.target.name]
-    }), () => console.log(this.state))
-  }
-
-  handleSubmit = () => {
-    console.log('submit!')
+  handleClick = () => {
+    this.setState(prevState => ({ open: !prevState.open }))
   }
 
   render() {
@@ -42,23 +26,12 @@ class Demo extends Component {
             <NavItem variant="link"><a href='#'>Test</a></NavItem>
           </NavGroup>
         </Navbar>
+        <Modal open={this.state.open} onClose={this.handleClick}>
+          <h1>modal open!!</h1>
+          <p>please work</p>
+        </Modal>
 
-        <Form onSubmit={this.handleSubmit}>
-          <ImageUpload label='Upload an avatar!' compression={.5} getImage={imageUrl => console.log(imageUrl)}/>
-          <Input
-            label='Enter Name'
-            name='name'
-            onChange={this.handleChange}
-            value={this.state.name} />
-          <Select
-            label='Select Option'
-            name='select'
-            onChange={this.handleChange}
-            options={['hello', 'work', 'please']}
-            value={this.state.select} />
-          <Checkbox name='admin' label='Admin' onChange={this.handleCheck} checked={this.state.admin} />
-          <Submit >CLICK</Submit>
-        </Form>
+        <Button handleClick={this.handleClick} label='open modal' />
       </div>
     )
   }

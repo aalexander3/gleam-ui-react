@@ -12,7 +12,7 @@ export SubHeader from './Headers/SubHeader'
 // UTILS
 export Divider from './Utils/Divider'
 
-// Layout
+// LAYOUT
 export FlexContainer from './Layout/FlexContainer'
 
 // IMAGES
@@ -30,3 +30,6 @@ export Select from './Form/Select'
 export Checkbox from './Form/Checkbox'
 export Form from './Form/Form'
 export Submit from './Form/Submit'
+
+// DISPLAYS
+export Modal from './Displays/Modal'

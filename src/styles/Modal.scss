@@ -1,0 +1,26 @@
+.modal {
+  z-index: 101;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #333a;
+  padding: 10vh;
+
+  &.open {
+    display: block;
+  }
+
+  &.closed {
+    display: none;
+  }
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2vh;
+  min-height: 10vh;
+  min-width: 10vw;
+  box-shadow: 2px 2px 10px 2px #2228, 4px 4px 24px 0 #2226
+}

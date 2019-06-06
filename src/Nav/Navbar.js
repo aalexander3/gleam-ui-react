@@ -27,7 +27,7 @@ class Navbar extends Component {
     return (
       <nav className={classes} onMouseLeave={this.closeNav}>
         {collapsable && <NavCollapse toggleCollapsed={this.toggleCollapsed} open={open} />}
-        {(open && hiddenContent)? hiddenContent : children}
+        {(open && hiddenContent.length > 0) ? hiddenContent : children}
       </nav>
     )
   }
@@ -45,7 +45,7 @@ class Navbar extends Component {
         </nav>
         {open &&
           <div className={`extended-nav ${color}`} >
-            {(open && hiddenContent) ? hiddenContent : children.slice(1)}
+            {(open && hiddenContent.length > 0) ? hiddenContent : children.slice(1)}
           </div>
         }
       </div>

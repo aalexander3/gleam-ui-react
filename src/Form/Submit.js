@@ -15,7 +15,6 @@ const Submit = ({ children, color, size, className }) => {
 
 Submit.proptypes = {
   children: PropTypes.arrayOf(PropTypes.node),
-  // onSubmit: PropTypes.func,
   color: PropTypes.oneOf(colorList),
   size: PropTypes.oneOf(sizeList),
   className: PropTypes.string,
@@ -23,7 +22,6 @@ Submit.proptypes = {
 
 Submit.defaultProps = {
   children: [],
-  // onSubmit: () => {},
   color: 'default',
   size: 'medium',
   className: '',
