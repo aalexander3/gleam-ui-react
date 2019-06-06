@@ -1,3 +1,4 @@
+import './Alert.css'
 import './App.css'
 import './Avatar.css'
 import './Button.css'

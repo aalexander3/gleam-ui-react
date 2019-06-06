@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import { render } from 'react-dom'
 
 import './styles.css'
-import { Navbar, NavItem, NavGroup, FlexContainer, Button, ImageUpload, Input, Select, Checkbox, Form, Submit, Modal } from '../../src'
+import { Navbar, NavItem, NavGroup, FlexContainer, Button, ImageUpload, Input, Select, Checkbox, Form, Submit, Modal, Alert } from '../../src'
 
 class Demo extends Component {
 
   state = {
-    open: false
+    open: true
   }
 
   handleClick = () => {
@@ -26,12 +26,7 @@ class Demo extends Component {
             <NavItem variant="link"><a href='#'>Test</a></NavItem>
           </NavGroup>
         </Navbar>
-        <Modal open={this.state.open} onClose={this.handleClick}>
-          <h1>modal open!!</h1>
-          <p>please work</p>
-        </Modal>
-
-        <Button handleClick={this.handleClick} label='open modal' />
+        {this.state.open && <Alert message="hey don't do that!!!!" variant="secondary" onClose={this.handleClick}/> }
       </div>
     )
   }

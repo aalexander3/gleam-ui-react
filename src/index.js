@@ -33,3 +33,6 @@ export Submit from './Form/Submit'
 
 // DISPLAYS
 export Modal from './Displays/Modal'
+
+// NOTIFICATIONS
+export Alert from './Notifications/Alert'
