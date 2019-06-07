@@ -7,7 +7,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 const Alert = ({ message, variant, onClose, timeout }) => {
 
-  if (timeout) setTimeOut(onClose, timeout) // optionally sets a timer to autoclose alert
+  if (timeout) setTimeout(onClose, timeout*1000) // optionally sets a timer to autoclose alert
 
   return (
     <div className={`alert ${variant}`}>
@@ -20,12 +20,14 @@ const Alert = ({ message, variant, onClose, timeout }) => {
 Alert.propTypes = {
   message: PropTypes.string,
   variant: PropTypes.oneOf(colorList),
-  timeout: PropTypes.number
+  timeout: PropTypes.number,
+  onClose: PropTypes.func
 }
 
 Alert.defaultProps = {
   message: '',
   variant: 'default',
+  onClose: () => {}
 }
 
  export default Alert

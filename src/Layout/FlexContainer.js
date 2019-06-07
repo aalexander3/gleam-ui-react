@@ -7,7 +7,8 @@ const FlexContainer = ({ direction, justifyContent, alignItems, width, height, w
     justifyContent,
     alignItems,
     width,
-    height
+    height,
+    flexWrap: wrap
   }
 
   const classes = `flex-container ${direction}`
@@ -23,7 +24,7 @@ FlexContainer.proptypes = {
   direction: PropTypes.oneOf(['row', 'column']),
   justifyContent: PropTypes.oneOf(['center', 'flexStart', 'flexEnd']),
   alignItems: PropTypes.oneOf(['center', 'flexStart', 'flexEnd']),
-  wrap: PropTypes.bool,
+  wrap: PropTypes.oneOf(['wrap', 'nowrap', 'wrap-reverse', 'initial', 'inherit']),
   height: PropTypes.string,
   width: PropTypes.string,
   children: PropTypes.arrayOf(PropTypes.node)
@@ -33,7 +34,7 @@ FlexContainer.defaultProps = {
   direction: 'row',
   justifyContent: 'center',
   alignItems: 'center',
-  wrap: false,
+  wrap: 'nowrap',
   height: '100%',
   width: '100%',
   children: []

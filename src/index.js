@@ -36,3 +36,6 @@ export Modal from './Displays/Modal'
 
 // NOTIFICATIONS
 export Alert from './Notifications/Alert'
+
+// CARDS
+export Card from './Cards/Card'

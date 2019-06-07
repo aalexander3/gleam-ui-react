@@ -1,0 +1,26 @@
+.card {
+  text-align: center;
+  min-width: 12vw;
+  min-height: 12vh;
+  max-width: 20vw;
+  max-height: 30vh;
+  padding: 4%;
+  display: inline-block;
+  margin: 2% 1% 2% 1%;
+  cursor: pointer;
+  transition: all .2s linear;
+  background-size: 0%;
+  border-radius: 1rem;
+  overflow-y: scroll; }
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3), 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+  background-position: center;
+  background-size: 80%;
+  background: #163C63 radial-gradient(circle, transparent 1%, #163C63 1%) center/15000%; }
+
+.card:active {
+  background-color: #BEE9FF;
+  background-size: 100%;
+  transition: background-size .3s linear; }
