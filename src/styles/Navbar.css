@@ -1,0 +1,90 @@
+.open {
+  box-shadow: none; }
+
+.nav-item {
+  text-decoration: none;
+  margin: 0 1rem;
+  cursor: pointer; }
+
+.plus-icon {
+  font-size: 1.6em;
+  transition: transform .2s linear; }
+  .plus-icon.open {
+    transform-origin: 50% 50%;
+    transform: rotateZ(45deg);
+    transition: transform .2s linear; }
+  .plus-icon:hover {
+    -webkit-text-stroke: 2px white;
+    text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF; }
+
+.navbar-vertical {
+  position: fixed;
+  padding: 4vh 12px;
+  z-index: 20;
+  min-width: 5vw;
+  height: -webkit-fill-available;
+  height: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: min-width 0.25s cubic-bezier(0, 0.25, 1, 0.75);
+  box-shadow: 2px 0px 4px -1px rgba(0, 0, 0, 0.2), 4px 0px 5px 0px rgba(0, 0, 0, 0.14), 1px 0px 10px 0px rgba(0, 0, 0, 0.12); }
+  .navbar-vertical.open {
+    min-width: 30vw; }
+  .navbar-vertical .nav-group-right, .navbar-vertical .nav-group-left {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+    flex-direction: column; }
+  .navbar-vertical .nav-item {
+    margin: 1rem 1rem; }
+
+.navbar-horizontal {
+  width: 96%;
+  min-height: 8vh;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  padding: 0 2%;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.nav-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.nav-group-right {
+  justify-content: flex-end;
+  margin-left: auto; }
+
+.nav-group-left {
+  justify-content: flex-start; }
+
+.nav-item.brand {
+  font-size: 1.4em; }
+
+.nav-item.link:hover {
+  text-decoration: underline; }
+
+.extended-nav {
+  width: 96%;
+  min-height: 8vh;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  padding: 2% 2%;
+  display: flex; }
+
+@media (max-width: 650px) {
+  .navbar-horizontal.open {
+    box-shadow: none; }
+  .extended-nav {
+    padding: 2% 2%;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end; }
+  .nav-group-right {
+    flex-direction: column;
+    align-items: flex-end; }
+  .nav-group-left {
+    flex-direction: column;
+    align-items: flex-end; } }

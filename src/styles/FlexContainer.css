@@ -1,0 +1,14 @@
+.flex-container {
+  display: flex;
+  padding: .5rem;
+  margin: 0; }
+
+.row {
+  flex-direction: row; }
+
+.column {
+  flex-direction: column; }
+
+.centered {
+  align-items: center;
+  justify-content: center; }
