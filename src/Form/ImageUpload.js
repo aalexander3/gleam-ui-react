@@ -20,11 +20,11 @@ class ImageUpload extends Component {
 
   getBase64 = img => {
     const reader = new FileReader();
-    reader.addEventListener('load', () => this.compressImage(reader.result));
+    reader.addEventListener('load', () => this.compressImage(reader.result, img.name));
     reader.readAsDataURL(img);
   }
 
-  compressImage = imgUrl => {
+  compressImage = (imgUrl, imageName) => {
     let canvas = document.createElement('canvas')
     let newDataUrl;
     let image = new Image()
@@ -34,8 +34,12 @@ class ImageUpload extends Component {
       canvas.width = image.width
       canvas.height = image.height
       ctx.drawImage(image, 0, 0, image.width, image.height)
-      newDataUrl = canvas.toDataURL("image/jpeg", this.props.compression)
-      this.saveImage(newDataUrl)
+      if (this.props.blob) {
+        canvas.toBlob((blob) => this.saveImageBlob(blob, imageName), "image/jpeg", 0.5)
+      }  else {
+        newDataUrl = canvas.toDataURL("image/jpeg", this.props.compression)
+        this.saveImage(newDataUrl)
+      }
     })
     return newDataUrl
   }
@@ -44,9 +48,18 @@ class ImageUpload extends Component {
     this.setState({
       imageUrl: imageUrl,
       loading: false
-    }, () => {
-      this.props.getImage(imageUrl)
-    })
+    }, () => this.props.getImage(imageUrl))
+  }
+
+  saveImageBlob = (imageBlob, imageName) => {
+    let formData = new FormData()
+    formData.append('selectedFile', imageBlob, imageName);
+    formData.append('type', 'image/jpeg');
+
+    this.setState({
+      imageUrl: URL.createObjectURL(imageBlob),
+      loading: false
+    }, () => this.props.getImage(formData))
   }
 
   render(){
@@ -83,13 +96,15 @@ class ImageUpload extends Component {
 ImageUpload.proptypes = {
   getImage: PropTypes.func,
   label: PropTypes.string,
-  compression: PropTypes.number
+  compression: PropTypes.number,
+  blob: PropTypes.bool
 }
 
 ImageUpload.defaultProps = {
   getImage: () => {},
   label: '',
-  compression: 1
+  compression: 1,
+  blob: false
 }
 
 

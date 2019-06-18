@@ -26,43 +26,9 @@ class Demo extends Component {
             <NavItem variant="link"><a href='#'>Test</a></NavItem>
           </NavGroup>
         </Navbar>
-        {this.state.open && <Alert message="hey don't do that!!!!" variant="secondary" onClose={this.handleClick} timeout={1}/> }
+        {this.state.open && <Alert message="hey don't do that!!!!" variant="primary" onClose={this.handleClick} timeout={4}/> }
 
-        <FlexContainer wrap='wrap'>
-          <Card color='primary'>
-            <h1>Hello</h1>
-            <p>this works?</p>
-          </Card>
-          <Card color='default'>
-            <h1>Hello</h1>
-            <h1>Hello</h1>
-            <h1>Hello</h1>
-            <h1>Hello</h1>
-            <p>this works?</p>
-          </Card>
-          <Card>
-            <h1>Hello</h1>
-            <p>this works?</p>
-          </Card>
-          <Card>
-            <h1>Hello what happens if this line is long??</h1>
-            <h1>Hello</h1>
-            <h1>Hello</h1>
-            <h1>Hello</h1>
-            <p>this works?</p>
-          </Card>
-          <Card>
-            <h1>Hello</h1>
-            <p>this works?</p>
-          </Card>
-          <Card>
-            <h1>Hello</h1>
-            <h1>Hello</h1>
-            <h1>Hello</h1>
-            <h1>Hello</h1>
-            <p>this works?</p>
-          </Card>
-        </FlexContainer>
+        <ImageUpload getImage={(img) => console.log(img)} blob />
       </div>
     )
   }
