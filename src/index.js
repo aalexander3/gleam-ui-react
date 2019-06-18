@@ -17,6 +17,7 @@ export FlexContainer from './Layout/FlexContainer'
 
 // IMAGES
 export Avatar from './Images/Avatar'
+export Carousel from './Images/Carousel'
 
 // NAVIGATION
 export Navbar from './Nav/Navbar'

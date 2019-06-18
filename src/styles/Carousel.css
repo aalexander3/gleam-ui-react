@@ -1,0 +1,30 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: url("/images/cursor-next.png"), auto;
+  background-color: #222;
+  opacity: .95; }
+
+.carousel.left {
+  cursor: url("/images/cursor-previous.png"), auto; }
+
+.carousel-img {
+  max-height: 100%;
+  max-width: 100%;
+  animation: fade-in 1s; }
+
+.carousel-img.fade-out {
+  animation: fade-out 1s; }
+
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade-out {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }

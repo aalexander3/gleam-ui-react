@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { render } from 'react-dom'
 
 import './styles.css'
-import { Navbar, NavItem, NavGroup, FlexContainer, Button, ImageUpload, Input, Select, Checkbox, Form, Submit, Modal, Alert, Card } from '../../src'
+import { Carousel, Navbar, NavItem, NavGroup, FlexContainer, Button, ImageUpload, Input, Select, Checkbox, Form, Submit, Modal, Alert, Card } from '../../src'
 
 class Demo extends Component {
 
@@ -15,6 +15,12 @@ class Demo extends Component {
   }
 
   render() {
+    const images = [
+      'https://images.unsplash.com/photo-1560775664-5010c750aeed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+      'https://images.unsplash.com/photo-1560836059-3277890e663b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+      'https://images.unsplash.com/photo-1560854786-8c2a4f642f96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
+    ]
+
     return (
       <div className='demo'>
         <Navbar>
@@ -29,6 +35,9 @@ class Demo extends Component {
         {this.state.open && <Alert message="hey don't do that!!!!" variant="primary" onClose={this.handleClick} timeout={4}/> }
 
         <ImageUpload getImage={(img) => console.log(img)} blob />
+        <Button label='hello' />
+        <Button label='hello' size='large' color='primary' />
+        <Carousel images={images} />
       </div>
     )
   }
