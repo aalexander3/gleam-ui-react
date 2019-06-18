@@ -9,18 +9,18 @@ class Carousel extends Component {
   }
 
   imageOrVideo = (img) => {
-    let image = /\.jpg|\.png/
+    let image = /\.jpg/ // add or options for other file extensions
     let video = /\.mp4/
     if (img.match(image)) {
       return <img className='carousel-img' src={img} alt={img}/>
     } else if (img.match(video)) {
       return (
         <video className='carousel-img' onMouseOver={this.playVideo} onMouseOut={this.pauseVideo} >
-            <source src={img} type="video/mp4" />
-            Sorry, your browser doesn't support embedded videos.
+          <source src={img} type="video/mp4" />
+          Sorry, your browser doesn't support embedded videos.
         </video>
       )
-    } else {
+    } else { // think of different default case
       return <img className='carousel-img' src={img} alt={img}/>
     }
   }
@@ -38,7 +38,12 @@ class Carousel extends Component {
   }
 
   trackMouse = e => {
-    let switchPoint = e.target.offsetWidth / 2 + 100
+    let switchPoint;
+    if (e.target.tagName === 'DIV') {
+      switchPoint = e.target.offsetWidth / 2
+    } else if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO') {
+      switchPoint = e.target.parentNode.offsetWidth / 2
+    }
     if (e.screenX > switchPoint) {
       if (this.state.left) {
         this.setState({ left: false })
