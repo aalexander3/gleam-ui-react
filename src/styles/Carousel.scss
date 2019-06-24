@@ -1,5 +1,8 @@
+@import './themes.scss';
+
 .carousel {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: url('/cursors/cursor-next.png'), auto;
@@ -19,6 +22,44 @@
 
 .carousel-img.fade-out {
   animation: fade-out 1s;
+}
+
+.carousel-dot {
+  height: 1vh;
+  width: 1vh;
+  margin: 1vh;
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $secondary;
+  border: solid transparent 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color .2s linear, color .2s linear;
+
+  &:hover {
+    background-color: $secondary;
+    color: $secondary;
+    opacity: .9;
+  }
+}
+
+.carousel-dot.active {
+  height: 1.1vh;
+  width: 1.1vh;
+  color: $secondary;
+  background-color: $secondary;
+  animation: ripple .3s linear;
+}
+
+@keyframes ripple {
+  from {
+    box-shadow: 0 0 0 4px $secondary;
+  }
+  to {
+    box-shadow: 0 0 0 0px $secondary;
+  }
 }
 
 @keyframes fade-in {

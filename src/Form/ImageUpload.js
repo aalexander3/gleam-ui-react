@@ -75,7 +75,7 @@ class ImageUpload extends Component {
 
     return (
       <div className="uploader">
-        {label && <p>{this.props.label}</p>}
+        <p>{label}</p>
         <label
           htmlFor='upload-input'
           className='upload-label' >

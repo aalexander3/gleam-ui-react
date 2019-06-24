@@ -18,7 +18,8 @@ class Demo extends Component {
     const images = [
       'https://images.unsplash.com/photo-1560775664-5010c750aeed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
       'https://images.unsplash.com/photo-1560836059-3277890e663b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-      'https://images.unsplash.com/photo-1560854786-8c2a4f642f96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
+      'https://images.unsplash.com/photo-1560854786-8c2a4f642f96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+      'https://jdid.art/static/media/blue-glow.21a817cd.mp4'
     ]
 
     return (
@@ -37,7 +38,7 @@ class Demo extends Component {
         <ImageUpload getImage={(img) => console.log(img)} blob />
         <Button label='hello' />
         <Button label='hello' size='large' color='primary' />
-        <Carousel images={images} />
+        <Carousel images={images} height={'60vh'} width={'60vw'} dots />
       </div>
     )
   }

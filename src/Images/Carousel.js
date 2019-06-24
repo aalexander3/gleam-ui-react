@@ -9,10 +9,10 @@ class Carousel extends Component {
   }
 
   imageOrVideo = (img) => {
-    let image = /\.jpg/ // add or options for other file extensions
+    let image = /\.jpg|\.png/ // add or options for other file extensions
     let video = /\.mp4/
     if (img.match(image)) {
-      return <img className='carousel-img' src={img} alt={img}/>
+      return <img className='carousel-img' src={img} alt={img} />
     } else if (img.match(video)) {
       return (
         <video className='carousel-img' onMouseOver={this.playVideo} onMouseOut={this.pauseVideo} >
@@ -76,22 +76,48 @@ class Carousel extends Component {
     }
   }
 
+  setImg = (e) => {
+    let value;
+    if (e.target.tagName === 'DIV') {
+      value = e.target.dataset.value
+    } else if (e.target.tagName === 'SPAN') {
+      value = e.target.parentNode.dataset.value
+    }
+    this.setState({ current: parseInt(value) })
+  }
+
   getCurrentImage = () => {
     const { current } = this.state
     const { images } = this.props
     return this.imageOrVideo(images[current])
   }
 
+  getDots = () => {
+    const { images } = this.props
+    return images.map((img, index) => {
+      if (index === this.state.current) {
+        return <div key={index} className='carousel-dot active' data-value={index} onClick={this.setImg}><span>{index+1}</span></div>
+      } else {
+        return <div key={index} className='carousel-dot' data-value={index} onClick={this.setImg}><span>{index+1}</span></div>
+      }
+    })
+  }
+
   render(){
-    const { height, width } = this.props
+    const { height, width, dots } = this.props
 
     return (
-      <div
-        className={this.state.left ? 'carousel left' : 'carousel' }
-        onMouseMove={this.trackMouse}
-        onClick={this.triggerCarousel}
-        style={{ height, width }} >
-        {this.getCurrentImage()}
+      <div className="flex-container column" style={{ height, width }}>
+        <div
+          className={this.state.left ? 'carousel left' : 'carousel' }
+          onMouseMove={this.trackMouse}
+          onClick={this.triggerCarousel}
+          style={{ height, width }} >
+          {this.getCurrentImage()}
+        </div>
+        {dots && <div className='flex-container row centered'>
+          {this.getDots()}
+        </div>}
       </div>
     )
   }
@@ -100,13 +126,15 @@ class Carousel extends Component {
 Carousel.propTypes = {
   images: PropTypes.array,
   height: PropTypes.string,
-  width: PropTypes.string
+  width: PropTypes.string,
+  dots: PropTypes.bool
 }
 
 Carousel.defaultProps = {
   images: [],
   height: '60vh',
-  width: '60vw'
+  width: '60vw',
+  dots: false
 }
 
 export default Carousel
