@@ -2,7 +2,22 @@ import React, { Component } from 'react'
 import { render } from 'react-dom'
 
 import './styles.css'
-import { Carousel, Navbar, NavItem, NavGroup, FlexContainer, Button, ImageUpload, Input, Select, Checkbox, Form, Submit, Modal, Alert, Card } from '../../src'
+import {
+  Carousel,
+  Navbar,
+  NavItem,
+  NavGroup,
+  FlexContainer,
+  Button,
+  ImageUpload,
+  Input, Select,
+  Checkbox,
+  Form,
+  Submit,
+  Modal,
+  Alert,
+  Header,
+  Card } from '../../src'
 
 class Demo extends Component {
 
@@ -34,11 +49,22 @@ class Demo extends Component {
           </NavGroup>
         </Navbar>
         {this.state.open && <Alert message="hey don't do that!!!!" variant="primary" onClose={this.handleClick} timeout={4}/> }
-
-        <ImageUpload getImage={(img) => console.log(img)} blob />
-        <Button label='hello' />
-        <Button label='hello' size='large' color='primary' />
-        <Carousel images={images} height={'60vh'} width={'60vw'} dots />
+        <FlexContainer>
+          <Card>
+            <Header text='hello world'/>
+            <p>Checking how this all looks</p>
+            <img src={images[0]} style={{height:'20vh'}}></img>
+          </Card>
+          <Card color='default'>
+            <Header text='hello world'/>
+            <p>Checking how this all looks</p>
+            <Button label="hello"/>
+          </Card>
+          <Card color='secondary'>
+            <Header text='hello world'/>
+            <p>Checking how this all looks</p>
+          </Card>
+        </FlexContainer>
       </div>
     )
   }

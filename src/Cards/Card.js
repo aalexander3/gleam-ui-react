@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { colorList } from '../constants/Colors'
 
 const Card = ({ children, color }) => {
-  const classes = `card ${color}`
+  const classes = `card card-${color}`
   return (
     <div className={classes} >
       {children}
@@ -17,7 +17,7 @@ Card.propTypes = {
 }
 
 Card.defaultProps = {
-  color: '',
+  color: 'default',
   children: []
 }
 
