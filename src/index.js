@@ -23,6 +23,7 @@ export Carousel from './Images/Carousel'
 export Navbar from './Nav/Navbar'
 export NavItem from './Nav/NavItem'
 export NavGroup from './Nav/NavGroup'
+export FullscreenNav from './Nav/FullscreenNav'
 
 // FORM
 export ImageUpload from './Form/ImageUpload'

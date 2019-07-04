@@ -7,6 +7,7 @@ import {
   Navbar,
   NavItem,
   NavGroup,
+  FullscreenNav,
   FlexContainer,
   Button,
   ImageUpload,
@@ -26,7 +27,7 @@ class Demo extends Component {
   }
 
   handleClick = () => {
-    this.setState(prevState => ({ open: !prevState.open }))
+    this.setState(prevState => ({ open: false }))
   }
 
   render() {
@@ -39,20 +40,16 @@ class Demo extends Component {
 
     return (
       <div className='demo'>
-        <Navbar>
-          <NavGroup justify='left'>
-            <NavItem variant="brand"><a href='#'>Home</a></NavItem>
-          </NavGroup>
-          <NavGroup justify='right'>
-            <NavItem variant="link"><a href='#'>Home</a></NavItem>
-            <NavItem variant="link"><a href='#'>Test</a></NavItem>
-          </NavGroup>
-        </Navbar>
+        <FullscreenNav>
+          <NavItem variant="brand"><a href='#'>Home</a></NavItem>
+          <NavItem variant="link"><a href='#'>Home</a></NavItem>
+          <NavItem variant="link"><a href='#'>Test</a></NavItem>
+        </FullscreenNav>
         {this.state.open && <Alert message="hey don't do that!!!!" variant="primary" onClose={this.handleClick} timeout={4}/> }
         <FlexContainer>
           <Card>
             <Header text='hello world'/>
-            <p>Checking how this all looks</p>
+            <p>Checking how this all looks... its okay</p>
             <img src={images[0]} style={{height:'20vh'}}></img>
           </Card>
           <Card color='default'>
