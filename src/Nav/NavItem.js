@@ -13,7 +13,7 @@ const NavItem = ({ children, variant }) => {
 
 NavItem.proptypes = {
   children: PropTypes.arrayOf(PropTypes.node),
-  variant: PropTypes.oneOf(['brand', 'link', 'button'])
+  variant: PropTypes.oneOf(['brand', 'link', 'button', 'fullscreen'])
 }
 
 NavItem.defaultProps = {

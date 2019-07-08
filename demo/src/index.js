@@ -31,26 +31,20 @@ class Demo extends Component {
   }
 
   render() {
-    const images = [
-      'https://images.unsplash.com/photo-1560775664-5010c750aeed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-      'https://images.unsplash.com/photo-1560836059-3277890e663b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-      'https://images.unsplash.com/photo-1560854786-8c2a4f642f96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-      'https://jdid.art/static/media/blue-glow.21a817cd.mp4'
-    ]
-
     return (
       <div className='demo'>
-        <FullscreenNav>
-          <NavItem variant="brand"><a href='#'>Home</a></NavItem>
-          <NavItem variant="link"><a href='#'>Home</a></NavItem>
-          <NavItem variant="link"><a href='#'>Test</a></NavItem>
+        <FullscreenNav color="primary">
+          <NavItem variant="fullscreen"><a href='#'>Home</a></NavItem>
+          <NavItem variant="fullscreen"><a href='#'>About</a></NavItem>
+          <NavItem variant="fullscreen"><a href='#'>Test</a></NavItem>
+          <NavItem variant="fullscreen"><a href='#'>Home</a></NavItem>
+          <NavItem variant="fullscreen"><a href='#'>About</a></NavItem>
+          <NavItem variant="fullscreen"><a href='#'>Test</a></NavItem>
         </FullscreenNav>
-        {this.state.open && <Alert message="hey don't do that!!!!" variant="primary" onClose={this.handleClick} timeout={4}/> }
         <FlexContainer>
           <Card>
             <Header text='hello world'/>
-            <p>Checking how this all looks... its okay</p>
-            <img src={images[0]} style={{height:'20vh'}}></img>
+            <p>Checking how this all looks</p>
           </Card>
           <Card color='default'>
             <Header text='hello world'/>

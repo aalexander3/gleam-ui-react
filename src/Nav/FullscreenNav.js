@@ -17,12 +17,14 @@ class FullscreenNav extends Component {
 
   render(){
     const { open } = this.state;
-    const classes = open ? `fullscreen-nav open` : `fullscreen-nav`;
+    const { color } = this.props;
+
+    const classes = open ? `fullscreen-nav open ${color}` : `fullscreen-nav`;
 
     return (
       <div className={classes}>
         <NavCollapse toggleCollapsed={this.toggleNav} open={open} />
-        <nav >
+        <nav>
           {open && <div className="fullscreen-nav--container">{this.props.children}</div>}
         </nav>
       </div>

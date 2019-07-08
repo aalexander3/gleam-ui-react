@@ -36,7 +36,7 @@ FlexContainer.defaultProps = {
   alignItems: 'center',
   wrap: 'nowrap',
   height: '100%',
-  width: '100%',
+  width: '100vw',
   children: []
 }
 
