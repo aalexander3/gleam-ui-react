@@ -18,7 +18,7 @@ Lightweight UI kit that will make your app sparkle!
 | :------------- | :----------------------------        |:------------- | :---------------------------- |
 | handleClick    | function                             | null          | callback for action           |
 | label          | string                               | null          | text to display               |
-| color          | enum - default / primary / secondary | default       | background color              |
+| color          | enum - default / blue / red | default       | background color              |
 | size           | enum - small / medium / large        | medium        | size of the button            |
 | disabled       | bool                                 | false         | disables the button           |
 | className      | string                               | ''            | additional classNames for the button      |

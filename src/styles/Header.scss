@@ -1,15 +1,35 @@
 @import './themes.scss';
 
 .header-default {
-  color: #000;
+  color: $dark;
 }
 
-.header-primary {
-  color: $primary;
+.header-blue {
+  color: $blue;
 }
 
-.header-secondary {
-  color: $secondary;
+.header-red {
+  color: $red;
+}
+
+.header-green {
+  color: $green;
+}
+
+.header-orange {
+  color: $orange;
+}
+
+.header-yellow {
+  color: $yellow;
+}
+
+.header-purple {
+  color: $purple;
+}
+
+.header-pink {
+  color: $pink;
 }
 
 .header-skewed {
@@ -22,14 +42,6 @@
   display: inline-block;
 }
 
-.header-highlight-primary {
-  color: #fff;
-  background-color: $primary;
-  display: inline-block;
-}
-
-.header-highlight-secondary {
-  color: #fff;
-  background-color: $secondary;
+.header-highlight {
   display: inline-block;
 }

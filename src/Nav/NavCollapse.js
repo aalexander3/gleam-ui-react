@@ -9,7 +9,7 @@ const NavCollapse = ({ toggleCollapsed, open }) => {
   const getHamburger = () => {
     return (
       <div className={`nav-item plus-icon ${open ? 'open': ''}`} onClick={toggleCollapsed} >
-        <FontAwesomeIcon icon={faPlusCircle} />
+        <FontAwesomeIcon icon={faPlusCircle} className='collapse-icon' />
       </div>
     )
   }

@@ -1,0 +1,140 @@
+@import './themes.scss';
+
+.card {
+  text-align: center;
+  min-width: 12vw;
+  min-height: 16vh;
+  max-width: 20vw;
+  padding: 2vh;
+  margin: 2vh 1vw;
+  cursor: pointer;
+  transition: all .2s linear;
+  background-size: 0%;
+  border-radius: 1rem;
+
+  &:hover {
+    transform: scale(1.02);
+    background-position: center;
+    background-size: 80%;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .3), 0 4px 10px 0 rgba(0, 0, 0, .15);
+  }
+}
+
+.card-default {
+  background-color: #ddd;
+
+  &:hover {
+    background: #ccc radial-gradient(circle, transparent 1%, #ccc 1%) center/15000%;
+  }
+
+  &:active {
+    background-color: #ddd;
+    background-size: 100%;
+    transition: background-size .3s linear;
+  }
+}
+
+.card-blue {
+  background-color: $blue;
+  color: #fff;
+
+  &:hover {
+    background: $blue-hover radial-gradient(circle, transparent 1%, $blue-hover 1%) center/15000%;
+  }
+
+  &:active {
+    background-color: $blue;
+    background-size: 100%;
+    transition: background-size .3s linear;
+  }
+}
+
+.card-red {
+  background-color: $red;
+  color: #fff;
+
+  &:hover {
+    background: $red-hover radial-gradient(circle, transparent 1%, $red-hover 1%) center/15000%;
+  }
+
+  &:active {
+    background-color: $red;
+    background-size: 100%;
+    transition: background-size .3s linear;
+  }
+}
+
+.card-green {
+  background-color: $green;
+  color: #fff;
+
+  &:hover {
+    background: $green-hover radial-gradient(circle, transparent 1%, $green-hover 1%) center/15000%;
+  }
+
+  &:active {
+    background-color: $green;
+    background-size: 100%;
+    transition: background-size .3s linear;
+  }
+}
+
+.card-yellow {
+  background-color: $yellow;
+  color: #000;
+
+  &:hover {
+    background: $yellow-hover radial-gradient(circle, transparent 1%, $yellow-hover 1%) center/15000%;
+  }
+
+  &:active {
+    background-color: $yellow;
+    background-size: 100%;
+    transition: background-size .3s linear;
+  }
+}
+
+.card-orange {
+  background-color: $orange;
+  color: #fff;
+
+  &:hover {
+    background: $orange-hover radial-gradient(circle, transparent 1%, $orange-hover 1%) center/15000%;
+  }
+
+  &:active {
+    background-color: $orange;
+    background-size: 100%;
+    transition: background-size .3s linear;
+  }
+}
+
+.card-purple {
+  background-color: $purple;
+  color: #fff;
+
+  &:hover {
+    background: $purple-hover radial-gradient(circle, transparent 1%, $purple-hover 1%) center/15000%;
+  }
+
+  &:active {
+    background-color: $purple;
+    background-size: 100%;
+    transition: background-size .3s linear;
+  }
+}
+
+.card-pink {
+  background-color: $pink;
+  color: #fff;
+
+  &:hover {
+    background: $pink-hover radial-gradient(circle, transparent 1%, $pink-hover 1%) center/15000%;
+  }
+
+  &:active {
+    background-color: $pink;
+    background-size: 100%;
+    transition: background-size .3s linear;
+  }
+}

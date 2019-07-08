@@ -9,7 +9,6 @@
   width: 96vw;
   padding: 1vh 1vw;
   border-radius: 1vh;
-  color: #fff;
   opacity: .9; }
 
 .alert p {
@@ -30,4 +29,5 @@
 
 .alert span:hover {
   background-color: #222;
+  color: #fff;
   opacity: .9; }

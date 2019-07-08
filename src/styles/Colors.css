@@ -1,8 +1,28 @@
-.primary {
+.blue {
   background-color: #2F84D8;
   color: #fff; }
 
-.secondary {
+.green {
+  background-color: #71E045;
+  color: #000; }
+
+.yellow {
+  background-color: #F1DB5E;
+  color: #000; }
+
+.orange {
+  background-color: #ED8C31;
+  color: #fff; }
+
+.purple {
+  background-color: #9D2FD8;
+  color: #fff; }
+
+.pink {
+  background-color: #ED31CD;
+  color: #000; }
+
+.red {
   background-color: #E8372E;
   color: #fff; }
 

@@ -39,7 +39,7 @@
   }
 }
 
-.text-btn-default {
+.text-btn-default.default {
   color: $dark;
   background-color: #fff;
 
@@ -48,36 +48,121 @@
   }
 }
 
-.text-btn-primary {
-  color: $primary;
+.text-btn-blue {
+  color: $blue;
   background-color: #fff;
 
   &:hover {
-    border: solid $primary-hover 1.3px;
-    box-shadow: -3px 3px $primary-hover;
+    border: solid $blue-hover 1.3px;
+    box-shadow: -3px 3px $blue-hover;
     transform: translate(0, 0);
   }
 
   &:active {
-    border: solid $primary-hover 1.3px;
-    box-shadow: -2px 2px $primary-hover;
+    border: solid $blue-hover 1.3px;
+    box-shadow: -2px 2px $blue-hover;
     transform: translate(-1px, 1px);
   }
 }
 
-.text-btn-secondary {
-  color: $secondary;
+.text-btn-red {
+  color: $red;
   background-color: #fff;
 
   &:hover {
-    border: solid $secondary-hover 1.3px;
-    box-shadow: -3px 3px $secondary-hover;
+    border: solid $red-hover 1.3px;
+    box-shadow: -3px 3px $red-hover;
     transform: translate(0, 0);
   }
 
   &:active {
-    border: solid $secondary 1.3px;
-    box-shadow: -2px 2px $secondary-hover;
+    border: solid $red 1.3px;
+    box-shadow: -2px 2px $red-hover;
+    transform: translate(-1px, 1px);
+  }
+}
+
+.text-btn-green {
+  color: $green;
+  background-color: #fff;
+
+  &:hover {
+    border: solid $green-hover 1.3px;
+    box-shadow: -3px 3px $green-hover;
+    transform: translate(0, 0);
+  }
+
+  &:active {
+    border: solid $green 1.3px;
+    box-shadow: -2px 2px $green-hover;
+    transform: translate(-1px, 1px);
+  }
+}
+
+.text-btn-yellow {
+  color: $yellow;
+  background-color: #fff;
+
+  &:hover {
+    border: solid $yellow-hover 1.3px;
+    box-shadow: -3px 3px $yellow-hover;
+    transform: translate(0, 0);
+  }
+
+  &:active {
+    border: solid $yellow 1.3px;
+    box-shadow: -2px 2px $yellow-hover;
+    transform: translate(-1px, 1px);
+  }
+}
+
+.text-btn-orange {
+  color: $orange;
+  background-color: #fff;
+
+  &:hover {
+    border: solid $orange-hover 1.3px;
+    box-shadow: -3px 3px $orange-hover;
+    transform: translate(0, 0);
+  }
+
+  &:active {
+    border: solid $orange 1.3px;
+    box-shadow: -2px 2px $orange-hover;
+    transform: translate(-1px, 1px);
+  }
+}
+
+.text-btn-purple {
+  color: $purple;
+  background-color: #fff;
+
+  &:hover {
+    border: solid $purple-hover 1.3px;
+    box-shadow: -3px 3px $purple-hover;
+    transform: translate(0, 0);
+  }
+
+  &:active {
+    border: solid $purple 1.3px;
+    box-shadow: -2px 2px $purple-hover;
+    transform: translate(-1px, 1px);
+  }
+}
+
+.text-btn-pink {
+  color: $pink;
+  background-color: #fff;
+
+  &:hover {
+    border: solid $pink-hover 1.3px;
+    box-shadow: -3px 3px $pink-hover;
+    transform: translate(0, 0);
+  }
+
+  &:active {
+    border: solid $pink 1.3px;
+    box-shadow: -2px 2px $pink-hover;
     transform: translate(-1px, 1px);
   }
 }

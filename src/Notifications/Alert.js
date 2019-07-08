@@ -5,12 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 
-const Alert = ({ message, variant, onClose, timeout }) => {
+const Alert = ({ message, color, onClose, timeout }) => {
 
-  if (timeout) setTimeOut(onClose, timeout) // optionally sets a timer to autoclose alert
+  if (timeout) setTimeout(onClose, timeout*1000) // optionally sets a timer to autoclose alert
 
   return (
-    <div className={`alert ${variant}`}>
+    <div className={`alert ${color}`}>
       <p>{ message }</p>
       <span onClick={onClose}><FontAwesomeIcon icon={faTimes}/></span>
     </div>
@@ -19,13 +19,15 @@ const Alert = ({ message, variant, onClose, timeout }) => {
 
 Alert.propTypes = {
   message: PropTypes.string,
-  variant: PropTypes.oneOf(colorList),
-  timeout: PropTypes.number
+  color: PropTypes.oneOf(colorList),
+  timeout: PropTypes.number,
+  onClose: PropTypes.func
 }
 
 Alert.defaultProps = {
   message: '',
-  variant: 'default',
+  color: 'default',
+  onClose: () => {}
 }
 
- export default Alert
+ export default Alert;

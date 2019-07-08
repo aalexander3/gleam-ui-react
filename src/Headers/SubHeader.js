@@ -4,7 +4,7 @@ import { colorList } from '../constants/Colors'
 
 
 const SubHeader = ({ text, color, className, children, skew, highlight, ...props }) => {
-  const classes = `${skew ? 'header-skewed ' : ''}${highlight ? 'header-highlight-' + color : 'header-' + color} ${className}`
+  const classes = `${skew ? 'header-skewed ' : ''}${highlight ? 'header-highlight ' + color : 'header-' + color} ${className}`
 
   return (
     <div>
@@ -12,7 +12,6 @@ const SubHeader = ({ text, color, className, children, skew, highlight, ...props
     </div>
   )
 }
-
 
 SubHeader.proptypes = {
   text: PropTypes.string,

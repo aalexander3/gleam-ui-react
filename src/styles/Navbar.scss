@@ -68,7 +68,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-
 }
 
 .nav-group {
@@ -86,13 +85,31 @@
   justify-content: flex-start;
 }
 
-
 .nav-item.brand {
   font-size: 1.4em;
 }
 
-.nav-item.link {
+.nav-item.fullscreen {
+  font-size: 3.4em;
+  margin-bottom: 3vh;
+  text-transform: uppercase;
+  font-family: "Fjalla One", Arial, sans-serif;
+  letter-spacing: .2em;
+  opacity: .8;
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  transform: rotate3d(0, 1, 0, 25deg) scale(1) translateZ(0) translateX(0);
+  transition: transform .2s linear, opacity .2s linear;
 
+  &:hover {
+    transform: rotate3d(0, 1, 0, 0deg) scale(1.1) translateZ(0) translateX(12px);
+    opacity: 1;
+    -webkit-text-stroke: 1px white;
+    text-decoration: underline;
+  }
+}
+
+.nav-item.link {
   &:hover {
     text-decoration: underline;
   }
@@ -104,6 +121,49 @@
   box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
   padding: 2% 2%;
   display: flex;
+}
+
+.fullscreen-nav {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  padding: 2vw;
+  height: 10vh;
+  width: 100vw;
+  transition: all .2s linear;
+
+  & .plus-icon {
+    font-size: 2.2em;
+  }
+
+  & .collapse-icon:hover {
+    border-radius: 50%;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, .3), 0 0 10px 0 rgba(0, 0, 0, .15);
+  }
+}
+
+.fullscreen-nav.open {
+  z-index: 10001;
+  height: 100vh;
+
+  & .collapse-icon:hover {
+    box-shadow: 0 0 10px 3px rgba(250, 250, 250, .3), 0 0 10px 1px rgba(250, 250, 250, .15);
+  }
+
+  & nav {
+    height: 90%;
+  }
+}
+
+.fullscreen-nav--container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  perspective: 300vw;
+  overflow-y: scroll;
+  animation: downAndSpin 1s;
 }
 
 @media (max-width:650px) {
@@ -127,4 +187,9 @@
     flex-direction: column;
     align-items: flex-end;
   }
+}
+
+@keyframes downAndSpin {
+    from {transform: translateY(-800px) perspective(0vw) rotate3d(0, 1, 0, -45deg)}
+    to {transform: translateY(0px) perspective(300vw) rotate3d(0, 1, 0, 0deg)}
 }

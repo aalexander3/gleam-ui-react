@@ -17,11 +17,13 @@ export FlexContainer from './Layout/FlexContainer'
 
 // IMAGES
 export Avatar from './Images/Avatar'
+export Carousel from './Images/Carousel'
 
 // NAVIGATION
 export Navbar from './Nav/Navbar'
 export NavItem from './Nav/NavItem'
 export NavGroup from './Nav/NavGroup'
+export FullscreenNav from './Nav/FullscreenNav'
 
 // FORM
 export ImageUpload from './Form/ImageUpload'
@@ -36,3 +38,6 @@ export Modal from './Displays/Modal'
 
 // NOTIFICATIONS
 export Alert from './Notifications/Alert'
+
+// CARDS
+export Card from './Cards/Card'

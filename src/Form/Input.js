@@ -27,7 +27,7 @@ class Input extends Component {
 
 
   render(){
-    const { name, onChange, value, type, disabled, label, error } = this.props
+    const { name, onChange, value, type, disabled, label, error, required } = this.props
     const { focused } = this.state
     const inputName = `input-${name}`
     const classes = `input ${error ? 'error' : ''}`
@@ -40,6 +40,7 @@ class Input extends Component {
           onBlur={this.blur}
           onChange={onChange}
           className={classes}
+          required={required}
           id={inputName}
           name={name}
           type={type}
@@ -69,7 +70,7 @@ Input.defaultProps = {
   required: false,
   name: '',
   onChange: () => {},
-  error: '', //should be a message?
+  error: '',
   disabled: false
 }
 

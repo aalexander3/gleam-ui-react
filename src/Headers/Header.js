@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { colorList } from '../constants/Colors'
 
 const Header = ({ text, color, className, skew, highlight, children, ...props }) => {
-  const classes = `${skew ? 'header-skewed ' : ''}${highlight ? 'header-highlight-' + color : 'header-' + color} ${className}`
+  const classes = `${skew ? 'header-skewed ' : ''}${highlight ? 'header-highlight ' + color : 'header-' + color} ${className}`
 
   return (
     <div>

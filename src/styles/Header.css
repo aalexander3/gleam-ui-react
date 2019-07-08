@@ -1,11 +1,26 @@
 .header-default {
-  color: #000; }
+  color: #17202A; }
 
-.header-primary {
+.header-blue {
   color: #2F84D8; }
 
-.header-secondary {
+.header-red {
   color: #E8372E; }
+
+.header-green {
+  color: #71E045; }
+
+.header-orange {
+  color: #ED8C31; }
+
+.header-yellow {
+  color: #F1DB5E; }
+
+.header-purple {
+  color: #9D2FD8; }
+
+.header-pink {
+  color: #ED31CD; }
 
 .header-skewed {
   transform: skew(-8deg, 0); }
@@ -15,12 +30,5 @@
   background-color: #17202A;
   display: inline-block; }
 
-.header-highlight-primary {
-  color: #fff;
-  background-color: #2F84D8;
-  display: inline-block; }
-
-.header-highlight-secondary {
-  color: #fff;
-  background-color: #E8372E;
+.header-highlight {
   display: inline-block; }

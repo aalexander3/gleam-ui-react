@@ -37,42 +37,115 @@
   }
 }
 
-.btn-default {
+.btn-default.default {
   border: solid $dark 1.3px;
   color: $dark;
   background-color: #fff;
 }
 
-.btn-primary {
-  border: solid $primary 1.3px;
-  color: #fff;
-  background-color: $primary;
+.btn-blue {
+  border: solid $blue 1.3px;
+  background-color: $blue;
+
+  &:hover {
+    box-shadow: -3px 3px $blue-hover;
+    transform: translate(0, 0);
+  }
+
+  &:active {
+    box-shadow: -2px 2px $blue-hover;
+    transform: translate(-1px, 1px);
+  }
 }
 
-.btn-primary:hover {
-  box-shadow: -3px 3px $primary-hover;
-  transform: translate(0, 0);
+.btn-red {
+  border: solid $red 1.3px;
+  background-color: $red;
+
+  &:hover {
+    box-shadow: -3px 3px $red-hover;
+    transform: translate(0, 0);
+  }
+
+  &:active {
+    box-shadow: -2px 2px $red-hover;
+    transform: translate(-1px, 1px);
+  }
 }
 
-.btn-primary:active {
-  box-shadow: -2px 2px $primary-hover;
-  transform: translate(-1px, 1px);
+.btn-green {
+  border: solid $green 1.3px;
+  background-color: $green;
+
+  &:hover {
+    box-shadow: -3px 3px $green-hover;
+    transform: translate(0, 0);
+  }
+
+  &:active {
+    box-shadow: -2px 2px $green-hover;
+    transform: translate(-1px, 1px);
+  }
 }
 
-.btn-secondary {
-  border: solid $secondary 1.3px;
-  color: #fff;
-  background-color: $secondary;
+.btn-yellow {
+  border: solid $yellow 1.3px;
+  background-color: $yellow;
+
+  &:hover {
+    box-shadow: -3px 3px $yellow-hover;
+    transform: translate(0, 0);
+  }
+
+  &:active {
+    box-shadow: -2px 2px $yellow-hover;
+    transform: translate(-1px, 1px);
+  }
 }
 
-.btn-secondary:hover {
-  box-shadow: -3px 3px $secondary-hover;
-  transform: translate(0, 0);
+.btn-orange {
+  border: solid $orange 1.3px;
+  background-color: $orange;
+
+  &:hover {
+    box-shadow: -3px 3px $orange-hover;
+    transform: translate(0, 0);
+  }
+
+  &:active {
+    box-shadow: -2px 2px $orange-hover;
+    transform: translate(-1px, 1px);
+  }
 }
 
-.btn-secondary:active {
-  box-shadow: -2px 2px $secondary-hover;
-  transform: translate(-1px, 1px);
+.btn-purple {
+  border: solid $purple 1.3px;
+  background-color: $purple;
+
+  &:hover {
+    box-shadow: -3px 3px $purple-hover;
+    transform: translate(0, 0);
+  }
+
+  &:active {
+    box-shadow: -2px 2px $purple-hover;
+    transform: translate(-1px, 1px);
+  }
+}
+
+.btn-pink {
+  border: solid $pink 1.3px;
+  background-color: $pink;
+
+  &:hover {
+    box-shadow: -3px 3px $pink-hover;
+    transform: translate(0, 0);
+  }
+
+  &:active {
+    box-shadow: -2px 2px $pink-hover;
+    transform: translate(-1px, 1px);
+  }
 }
 
 .btn-small {
