@@ -1,6 +1,6 @@
 {
   "name": "gleam-ui-react",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "gleam-ui-react React UI Kit",
   "main": "lib/index.js",
   "module": "es/index.js",

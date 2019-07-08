@@ -5,20 +5,22 @@
 Lightweight UI kit that will make your app sparkle!
 
 ## Installation
----
  `npm i gleam-ui-react`
 
-## Usage
----
+## Docs
+Visit the Gleam UI React [docs][docs] for information about Gleam UI components and how to use them.
 
-### Button
+
+## Example Usage
+
+#### Button
 
 #### Props
 | Name           | Prop Type                            | Default       | Description                   |
 | :------------- | :----------------------------        |:------------- | :---------------------------- |
 | handleClick    | function                             | null          | callback for action           |
 | label          | string                               | null          | text to display               |
-| color          | enum - default / blue / red | default       | background color              |
+| color          | enum - color list                    | default       |
 | size           | enum - small / medium / large        | medium        | size of the button            |
 | disabled       | bool                                 | false         | disables the button           |
 | className      | string                               | ''            | additional classNames for the button      |
@@ -27,6 +29,7 @@ Lightweight UI kit that will make your app sparkle!
 
 examples:
 ```js
+  import React from 'react'
   import { Button } from 'gleam-ui-react'
 
   const SomeComponent = () => {
@@ -43,3 +46,4 @@ examples:
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
 [npm]: https://www.npmjs.org/package/gleam-ui-react
+[docs]: https://github.com/aalexander3/gleam-ui-react
