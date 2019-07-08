@@ -32,15 +32,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $secondary;
+  color: $red;
   border: solid transparent 1px;
   border-radius: 50%;
   cursor: pointer;
   transition: background-color .2s linear, color .2s linear;
 
   &:hover {
-    background-color: $secondary;
-    color: $secondary;
+    background-color: $red;
+    color: $red;
     opacity: .9;
   }
 }
@@ -48,17 +48,17 @@
 .carousel-dot.active {
   height: 1.1vh;
   width: 1.1vh;
-  color: $secondary;
-  background-color: $secondary;
+  color: $red;
+  background-color: $red;
   animation: ripple .3s linear;
 }
 
 @keyframes ripple {
   from {
-    box-shadow: 0 0 0 4px $secondary;
+    box-shadow: 0 0 0 4px $red;
   }
   to {
-    box-shadow: 0 0 0 0px $secondary;
+    box-shadow: 0 0 0 0px $red;
   }
 }
 

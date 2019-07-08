@@ -26,7 +26,6 @@ const Checkbox = ({ label, name, checked, onChange, error, disabled }) => {
   )
 }
 
-
 Checkbox.proptypes = {
   label: PropTypes.string,
   checked: PropTypes.bool,

@@ -1,12 +1,37 @@
 @import 'themes.scss';
 
-.primary {
-  background-color: $primary;
+.blue {
+  background-color: $blue;
   color: #fff;
 }
 
-.secondary {
-  background-color: $secondary;
+.green {
+  background-color: $green;
+  color: #000;
+}
+
+.yellow {
+  background-color: $yellow;
+  color: #000;
+}
+
+.orange {
+  background-color: $orange;
+  color: #fff;
+}
+
+.purple {
+  background-color: $purple;
+  color: #fff;
+}
+
+.pink {
+  background-color: $pink;
+  color: #000;
+}
+
+.red {
+  background-color: $red;
   color: #fff;
 }
 

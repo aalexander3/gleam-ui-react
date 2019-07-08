@@ -24,22 +24,72 @@
     background-size: 100%;
     transition: background-size .3s linear; }
 
-.card-primary {
+.card-blue {
   background-color: #2F84D8;
   color: #fff; }
-  .card-primary:hover {
+  .card-blue:hover {
     background: #163C63 radial-gradient(circle, transparent 1%, #163C63 1%) center/15000%; }
-  .card-primary:active {
+  .card-blue:active {
     background-color: #2F84D8;
     background-size: 100%;
     transition: background-size .3s linear; }
 
-.card-secondary {
+.card-red {
   background-color: #E8372E;
   color: #fff; }
-  .card-secondary:hover {
-    background: #A92922 radial-gradient(circle, transparent 1%, #A92922 1%) center/15000%; }
-  .card-secondary:active {
+  .card-red:hover {
+    background: #C93028 radial-gradient(circle, transparent 1%, #C93028 1%) center/15000%; }
+  .card-red:active {
     background-color: #E8372E;
+    background-size: 100%;
+    transition: background-size .3s linear; }
+
+.card-green {
+  background-color: #71E045;
+  color: #fff; }
+  .card-green:hover {
+    background: #5DB839 radial-gradient(circle, transparent 1%, #5DB839 1%) center/15000%; }
+  .card-green:active {
+    background-color: #71E045;
+    background-size: 100%;
+    transition: background-size .3s linear; }
+
+.card-yellow {
+  background-color: #F1DB5E;
+  color: #000; }
+  .card-yellow:hover {
+    background: #E5CB39 radial-gradient(circle, transparent 1%, #E5CB39 1%) center/15000%; }
+  .card-yellow:active {
+    background-color: #F1DB5E;
+    background-size: 100%;
+    transition: background-size .3s linear; }
+
+.card-orange {
+  background-color: #ED8C31;
+  color: #fff; }
+  .card-orange:hover {
+    background: #D8802D radial-gradient(circle, transparent 1%, #D8802D 1%) center/15000%; }
+  .card-orange:active {
+    background-color: #ED8C31;
+    background-size: 100%;
+    transition: background-size .3s linear; }
+
+.card-purple {
+  background-color: #9D2FD8;
+  color: #fff; }
+  .card-purple:hover {
+    background: #A541DB radial-gradient(circle, transparent 1%, #A541DB 1%) center/15000%; }
+  .card-purple:active {
+    background-color: #9D2FD8;
+    background-size: 100%;
+    transition: background-size .3s linear; }
+
+.card-pink {
+  background-color: #ED31CD;
+  color: #fff; }
+  .card-pink:hover {
+    background: #EE43D1 radial-gradient(circle, transparent 1%, #EE43D1 1%) center/15000%; }
+  .card-pink:active {
+    background-color: #ED31CD;
     background-size: 100%;
     transition: background-size .3s linear; }

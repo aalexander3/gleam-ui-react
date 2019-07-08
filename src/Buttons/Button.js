@@ -5,7 +5,7 @@ import { colorList, sizeList } from '../constants/Colors'
 
 const Button = ({ handleClick, label, size, color, className, children, ...props }) => {
   return (
-    <button onClick={handleClick} className={`btn btn-${size} btn-${color} ${className}`} {...props} >{label} {children}</button>
+    <button onClick={handleClick} className={`btn btn-${size} btn-${color} ${color} ${className}`} {...props} >{label} {children}</button>
   )
 }
 

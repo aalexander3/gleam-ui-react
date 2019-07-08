@@ -22,12 +22,12 @@
   background-color: #fff;
 
   &:hover {
-    border-bottom: 1.5px solid $primary;
+    border-bottom: 1.5px solid $blue;
   }
 
   &:focus {
     outline: none;
-    border-bottom: 1.5px solid $primary;
+    border-bottom: 1.5px solid $blue;
   }
 
   &.error {
@@ -79,7 +79,7 @@ input[type='checkbox'] {
 
   &.filled {
     transform: scale(.85) translate(-.5em, -22px);
-    color: $primary;
+    color: $blue;
   }
 
   &.error {

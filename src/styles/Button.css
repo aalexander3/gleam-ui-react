@@ -26,36 +26,80 @@
     box-shadow: 0 0 #17202A;
     transform: translate(-3px, 3px); }
 
-.btn-default {
+.btn-default.default {
   border: solid #17202A 1.3px;
   color: #17202A;
   background-color: #fff; }
 
-.btn-primary {
+.btn-blue {
   border: solid #2F84D8 1.3px;
-  color: #fff;
   background-color: #2F84D8; }
+  .btn-blue:hover {
+    box-shadow: -3px 3px #163C63;
+    transform: translate(0, 0); }
+  .btn-blue:active {
+    box-shadow: -2px 2px #163C63;
+    transform: translate(-1px, 1px); }
 
-.btn-primary:hover {
-  box-shadow: -3px 3px #163C63;
-  transform: translate(0, 0); }
-
-.btn-primary:active {
-  box-shadow: -2px 2px #163C63;
-  transform: translate(-1px, 1px); }
-
-.btn-secondary {
+.btn-red {
   border: solid #E8372E 1.3px;
-  color: #fff;
   background-color: #E8372E; }
+  .btn-red:hover {
+    box-shadow: -3px 3px #C93028;
+    transform: translate(0, 0); }
+  .btn-red:active {
+    box-shadow: -2px 2px #C93028;
+    transform: translate(-1px, 1px); }
 
-.btn-secondary:hover {
-  box-shadow: -3px 3px #A92922;
-  transform: translate(0, 0); }
+.btn-green {
+  border: solid #71E045 1.3px;
+  background-color: #71E045; }
+  .btn-green:hover {
+    box-shadow: -3px 3px #5DB839;
+    transform: translate(0, 0); }
+  .btn-green:active {
+    box-shadow: -2px 2px #5DB839;
+    transform: translate(-1px, 1px); }
 
-.btn-secondary:active {
-  box-shadow: -2px 2px #A92922;
-  transform: translate(-1px, 1px); }
+.btn-yellow {
+  border: solid #F1DB5E 1.3px;
+  background-color: #F1DB5E; }
+  .btn-yellow:hover {
+    box-shadow: -3px 3px #E5CB39;
+    transform: translate(0, 0); }
+  .btn-yellow:active {
+    box-shadow: -2px 2px #E5CB39;
+    transform: translate(-1px, 1px); }
+
+.btn-orange {
+  border: solid #ED8C31 1.3px;
+  background-color: #ED8C31; }
+  .btn-orange:hover {
+    box-shadow: -3px 3px #D8802D;
+    transform: translate(0, 0); }
+  .btn-orange:active {
+    box-shadow: -2px 2px #D8802D;
+    transform: translate(-1px, 1px); }
+
+.btn-purple {
+  border: solid #9D2FD8 1.3px;
+  background-color: #9D2FD8; }
+  .btn-purple:hover {
+    box-shadow: -3px 3px #A541DB;
+    transform: translate(0, 0); }
+  .btn-purple:active {
+    box-shadow: -2px 2px #A541DB;
+    transform: translate(-1px, 1px); }
+
+.btn-pink {
+  border: solid #ED31CD 1.3px;
+  background-color: #ED31CD; }
+  .btn-pink:hover {
+    box-shadow: -3px 3px #EE43D1;
+    transform: translate(0, 0); }
+  .btn-pink:active {
+    box-shadow: -2px 2px #EE43D1;
+    transform: translate(-1px, 1px); }
 
 .btn-small {
   min-width: 10vh;
